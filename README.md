@@ -6,14 +6,14 @@ A full-stack **Car Rental System** built with **React, Tailwind CSS, Vite, Sprin
 
 ## Features
 
-- 🚗 Browse available rental cars
-- 📍 View car location, seating capacity, and daily rental price
-- 📅 Book cars using a modal-based booking system
-- ✅ Real-time availability status (Available / Already Booked)
-- 🖼️ Upload and manage vehicle images
-- 📱 Responsive UI built with Tailwind CSS
-- 🔄 RESTful API integration
-- 💾 MySQL database for persistent data storage
+- Browse available rental cars
+- View car location, seating capacity, and daily rental price
+- Book cars using a modal-based booking system
+- Real-time availability status (Available / Already Booked)
+- Upload and manage vehicle images
+- Responsive UI built with Tailwind CSS
+- RESTful API integration
+- MySQL database for persistent data storage
 
 ---
 
