@@ -1,10 +1,10 @@
-# 🚗 GoDrive – Car Rental System
+# GoDrive – Car Rental System
 
 A full-stack **Car Rental System** built with **React, Tailwind CSS, Vite, Spring Boot, and MySQL**. GoDrive enables users to browse available vehicles, view rental details, and book cars through a responsive and user-friendly interface. The application integrates a modern React frontend with a Spring Boot REST API and MySQL database for efficient vehicle and booking management.
 
 ---
 
-## ✨ Features
+## Features
 
 - 🚗 Browse available rental cars
 - 📍 View car location, seating capacity, and daily rental price
@@ -17,7 +17,7 @@ A full-stack **Car Rental System** built with **React, Tailwind CSS, Vite, Sprin
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - React.js
@@ -39,7 +39,7 @@ A full-stack **Car Rental System** built with **React, Tailwind CSS, Vite, Sprin
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 GoDrive-Car-Rental-System
@@ -69,7 +69,7 @@ GoDrive-Car-Rental-System
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The backend follows a layered architecture:
 
@@ -80,7 +80,7 @@ The backend follows a layered architecture:
 
 ---
 
-## 🗄️ Database
+## Database
 
 **Database Name:** `carRental`
 
@@ -108,7 +108,7 @@ The backend follows a layered architecture:
 
 ---
 
-## 🔌 API Endpoints
+## API Endpoints
 
 ### Add a New Car
 
@@ -128,7 +128,7 @@ Returns the list of available vehicles for the frontend.
 
 ---
 
-## 🔄 Data Flow
+## Data Flow
 
 ```
 React Frontend
@@ -148,7 +148,7 @@ React UI
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Clone the Repository
 
@@ -172,7 +172,7 @@ npm run dev
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Siva Rakshana**
 
