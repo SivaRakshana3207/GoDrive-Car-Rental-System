@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import BookingModal from "./BookingModel";
 import API from "../services/api.js";
+import carBG from "../assets/carBG.PNG";
 
 export default function CarCard() {
 
@@ -31,7 +32,7 @@ export default function CarCard() {
                         <div key={car.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
 
                             <img
-                                src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${car.image}`}
+                                src={carBG}
                                 alt={car.carName}
                                 className="w-full h-52 object-cover"
                             />
