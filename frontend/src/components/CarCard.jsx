@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import BookingModal from "./BookingModel";
 import API from "../services/api.js";
-import carBG from "../assets/carBG.PNG";
+import carBG from "../assets/car.PNG";
 
 export default function CarCard() {
 
