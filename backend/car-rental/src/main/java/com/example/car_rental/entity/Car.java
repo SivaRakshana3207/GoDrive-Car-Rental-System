@@ -19,5 +19,4 @@ public class Car {
     private String place;
     private int price;
     private boolean booked;
-    private String image;
 }
