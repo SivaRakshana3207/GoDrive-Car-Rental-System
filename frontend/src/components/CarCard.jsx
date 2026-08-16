@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import BookingModal from "./BookingModel";
+import API from "../services/api.js";
 
 export default function CarCard() {
 
@@ -13,7 +14,7 @@ export default function CarCard() {
 
     const fetchCars = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/api/cars");
+            const response = await API.get("/cars");
             setCars(response.data);
         } catch (error) {
             console.log(error);
@@ -29,7 +30,11 @@ export default function CarCard() {
                     {cars.map((car) => (
                         <div key={car.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
 
-                            <img src={`http://localhost:8080/uploads/${car.image}`} alt={car.carName} className="w-full h-52 object-cover"/>
+                            <img
+                                src={`${import.meta.env.VITE_BACKEND_URL}/uploads/${car.image}`}
+                                alt={car.carName}
+                                className="w-full h-52 object-cover"
+                            />
 
                             <div className="p-5">
                                 <h2 className="text-2xl font-bold">{car.carName}</h2>

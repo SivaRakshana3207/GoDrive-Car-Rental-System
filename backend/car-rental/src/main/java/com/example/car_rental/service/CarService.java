@@ -3,6 +3,7 @@ package com.example.car_rental.service;
 import com.example.car_rental.entity.Car;
 import com.example.car_rental.repository.CarRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -17,7 +18,8 @@ public class CarService {
     @Autowired
     private CarRepository carRepository;
 
-    private static final String UPLOAD_DIR = System.getProperty("user.dir") + File.separator + "backend" + File.separator + "car-rental" + File.separator + "uploads" + File.separator;
+    @Value("${upload.dir}")
+    private String uploadDir;
 
     public List<Car> getAllCars() {
         return carRepository.findAll();
@@ -28,18 +30,25 @@ public class CarService {
     }
 
     public Car addCar(Car car, MultipartFile imageFile) throws IOException {
-        File dir = new File(UPLOAD_DIR);
+
+        File dir = new File(uploadDir);
+
         if (!dir.exists()) {
             dir.mkdirs();
         }
 
-        String fileName = UUID.randomUUID() + "_" + imageFile.getOriginalFilename();
+        String originalFileName = imageFile.getOriginalFilename();
+
+        String fileName = UUID.randomUUID() + "_" + originalFileName;
 
         File destination = new File(dir, fileName);
+
         System.out.println("Saving image to: " + destination.getAbsolutePath());
+
         imageFile.transferTo(destination);
-        
+
         car.setImage(fileName);
+
         return carRepository.save(car);
     }
 }

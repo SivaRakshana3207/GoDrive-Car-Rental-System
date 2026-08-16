@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import API from "../services/api.js";
 
 export default function BookingModal({ car, closeModal, refreshCars }) {
 
@@ -9,7 +10,7 @@ export default function BookingModal({ car, closeModal, refreshCars }) {
 
     const bookCar = async () => {
         try {
-            await axios.post("http://localhost:8080/api/booking", {
+            await API.post("/booking", {
                 carID: car.id,
                 customerName,
                 phoneNumber,
